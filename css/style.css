@@ -1,0 +1,736 @@
+/*  1-common styles c
+  2- General css styles  
+  3- sections 
+     3.0  header           
+     3.1  home sections   
+     3.2  about section   
+     3.3  Photo-Library   
+     3.4  price section 
+     3.5   contact section 
+     3.6   footer section
+*/ 
+/* 1-common styles  */
+.hover-opacity {
+    transition: opacity .5s;
+}
+
+.hover-opacity:hover {
+    opacity: 0.8;
+}
+.ltr-effect{position: relative;
+   
+}
+.ltr-effect::after{position: absolute;
+    content:"";
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: hsla(0, 2%, 34%, 0.969);
+    transition: width .5s;
+     z-index:-2;
+     border-radius: 0.25rem;
+}
+.ltr-effect:hover::after{
+    width: 100%;
+  
+}
+.shadow{
+      z-index:0;
+}
+.ttb-effect{position: relative;
+   
+}
+.ttb-effect::after{position: absolute;
+    content:"";
+    width: 100%;
+    height:0;
+    top: 0;
+    left: 0;
+    background-color: hsla(0, 2%, 34%, 0.5);;
+    transition: height .3s;
+     z-index: 1;
+}
+.ttb-effect:hover::after{
+    height: 100%;
+  
+}
+
+/*  2- General css styles*/
+html {
+  scroll-behavior: smooth;
+
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    font-family:sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+
+}
+
+.clear {
+    clear: both;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: montserrat, sans-serif;
+}
+
+button {
+    font-family: montserrat, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.pd-y {
+    padding: 60px 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+ 
+
+}
+.section-header-left {
+    text-align:start;
+    margin-bottom: 10px;
+
+}
+
+
+.section-header-left .line {
+    display: block;
+    width: 60px;
+    height: 5px;
+    background-color: #6195ff;
+  
+    margin-top: 10px;
+   
+}
+.section-header .section-title {
+    font-size: 35px;
+    text-transform: capitalize;
+
+
+}
+
+.section-header .line {
+    display: block;
+    width: 60px;
+    height: 5px;
+    background-color: #6195ff;
+    margin: 0 auto 70px auto;
+    margin-top: 10px;
+}
+.img-poto{
+    width: 300px;
+    height: 300px;
+}
+
+
+/* 3-sections styles */
+/* 3.0 header */
+.header {
+
+    position:fixed;
+    z-index:10;
+    background:linear-gradient(to left bottom, #b4f1b4, transparent);
+    height: 73px;
+width: 100%;
+border: 4px solid linear-gradient(to left bottom, #b4f1b4, transparent);
+}
+
+.header-containr{
+       height: 73px;
+width: 100%;
+position: relative;
+    
+}
+
+.header img{
+    float: left;
+  margin: 0px 5px;
+
+
+}
+
+
+.header-container .navpar{
+    width: 100%;
+    direction: rtl;
+list-style: none;
+display: inline-block;
+position: absolute;
+padding: 20px 79px;}
+.header-container .navpar li{
+    display: inline-block;
+}
+.header-container .navpar li a{
+    color:rgb(24, 3, 184);
+    text-decoration: none;
+    display: block;
+    padding: 5px 24px;
+    font-size:24px;}
+
+   .navbar-nav .nav-link {
+    display: inline-block;
+    width: auto ;
+    height:auto ;
+}
+ 
+
+
+.header-address {
+    color: #2500cc !important; /* اللون  الداكن */
+}
+
+/* لتغيير لون الروابط عند مرور مؤشر الفأرة عليها (Hover) */
+.header-address:hover {
+    color: #646399 !important; /* لون فاتح عند المرور */
+
+}
+.header-address::after {
+    content: "";
+    width: 100%; /* اجعل العرض 100% دائمًا */
+    height: 3px; /* اجعل الارتفاع 3px دائمًا */
+    background-color: #6195ff;
+    display: block;
+    margin-top: 5px;
+    transform: scaleX(0); /* **الحل: اجعله 0% على محور X** */
+    transform-origin: left; /* ابدأ التشغيل من اليسار */
+    transition:  transform 0.5s ease;
+}
+
+.header-address:hover::after {
+    transform: scaleX(1); /* **عند التمرير، اجعله 100% على محور X (سيظهر)** */
+
+}
+
+.navbar-toggler {
+position: absolute;
+
+   right: 10%;}
+
+ .header .images-logo img{
+    width: 73px;
+    left: 60px;
+ }
+/* 3.1 home section */
+.home {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to left bottom, #b4f1b4, transparent);
+    background-size: contain;
+    background-repeat: repeat;
+    background-origin: content-box;
+    background-clip: content-box;
+    position: relative;
+   
+}
+
+.home-content {
+    width: 800px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+
+.home .title {
+    font-size: 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bolder;
+
+}
+
+.home .home-desc {
+    margin: 10px 0;
+    font-size: 27px;
+    letter-spacing: 1px;
+    line-height: 70px;
+    text-transform: capitalize;
+    font-weight: bold;
+    text-shadow: black, 10px;
+}
+
+.get-started {
+    width: 20%;
+    height: 50px;
+    font-size: x-large;
+    text-transform: capitalize;
+    background-image: linear-gradient(to left bottom, #b4f1b4, transparent);
+    border-radius: 20px;
+
+}
+.btn-fixed-width {
+  min-width: 150px; /* اختر القيمة المناسبة التي لا تريد أن يتقلص الزر عنها */
+}
+.row-start{
+    padding-top: 10px;
+    padding-bottom: 10px;
+} 
+.column-content{
+    padding: 20px;
+    border-radius: 8px;
+ 
+    transition: transform 0.3s ease-in-out;
+}
+.column-content:hover{
+    transform: translateY(-10px);
+}
+
+
+/* 3.2 about section */
+.about-item {
+
+   background-color: #d1d1d1;
+    text-align: center;
+    border: 1px solid #e8e8e8;
+    padding: 50px 20px;
+    position: relative;
+
+}
+
+.about-item.mg {
+    margin: 0 5%;
+
+}
+.about-item .icon{
+   
+   color: #6195ff;
+   margin-bottom: 20px;
+
+}
+.card-container{
+    display: flex;
+    flex-direction: row;
+}
+.about-item-tital{
+    text-transform: capitalize;
+  font-size: 1.5vw; /* سيصغر الخط كلما صغرت الشاشة */
+    color: #000000;
+    transition: color 0.5s;
+    
+}
+
+.about-item-dec{
+ font-size: 0.9vw; /* سيصغر الخط كلما صغرت الشاشة */
+    color: #000000;
+    text-transform: capitalize;
+    transition: color .5s;
+}
+/* هذا الكلاس يضمن بقاء الـ div مربعًا دائمًا بغض النظر عن محتواه */
+.about-item-square {
+  /* هذه الخاصية هي ما تجعل العنصر مربعاً (نسبة 1 إلى 1) */
+  aspect-ratio: 1 / 1; 
+  display: flex; /* لترتيب المحتوى داخله */
+  flex-direction: column;
+  justify-content: center; /* لتوسيط المحتوى عمودياً */
+}
+
+.about-item-link{   color: #6195ff;
+    font-size: 16px;
+
+}
+.about-item:hover  .about-item-dec  {
+    color: #6195ff;
+;
+}
+.about-item:hover  .about-item-tital  {
+    color:  #6195ff;
+
+}
+
+/* 3.3 Photo-Library  */
+
+.gallory-img{
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    object-fit:initial;
+    width:auto;
+    height:300px;
+}
+.gallory-img:hover{
+    transform:scale(1.05)
+}
+.sec-img:hover{
+     transform:scale(1.05)
+}
+.Photo-Library{
+    background-color: #f9f9f9;
+}
+
+.Photo-item{
+    position: relative;
+}
+.Photo-item img{
+    width: 100%;
+}
+.Photo-item.mg{
+    margin: 0 2%;
+}
+.Photo-item .layer-photo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(120, 4%, 5%, 0.5);
+    opacity: 0;visibility: hidden;
+    transition: opacity .2s, visibility.2s;
+
+}
+.Photo-item:hover .layer-photo{
+    opacity: 1;visibility: visible;
+}
+.layer-info{
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    text-align: center;
+    line-height: 29px;
+}
+.layer-info .category{
+    color: #6195ff;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    top: 10px;
+    position: relative;
+    transition: top .5s;
+    transition-delay: .2s;
+    opacity: 0;
+
+}
+.layer-info .layer-photo-titel{
+    font-size: 20px;
+    color:white;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    top: 10px;
+    position: relative;
+    transition: top .5s;
+    transition-delay: .3s;
+    opacity: 0;
+   
+
+}
+.layer-info a{
+    color: white; 
+     top: 10px;
+    position: relative;
+    transition: top .5s ;
+    transition-delay: .3s;
+    opacity: 0;
+    
+
+}
+.layer-info a i{
+    line-height: 40px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #6195ff;
+  
+}
+.Photo-item:hover .category,
+ .Photo-item:hover .layer-photo-titel, 
+ .Photo-item:hover .category,
+ .Photo-item:hover a{
+    top: 0;
+    opacity: 1;
+
+}
+/* 3.4 Portfolio section */
+
+.Portfolio-content .Portfolio-section{
+    border: 1px solid #e8e8e8;
+margin-bottom: 36px;
+padding: 20px 15px 30px 70px;
+
+
+/* background-color: black; */
+
+}.Portfolio-section.mg{
+    margin: 0 3%;
+}
+.icon-wrapper {
+    background-color: #f8f9fa; /* وضع خلفية خفيفة خلف الأيقونة */
+    border-radius: 50%;        
+    padding: 6px;             /* مسافة داخلية حول الأيقونة */
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    
+}
+.p{
+    padding: 2px;
+}
+
+.h-250{
+     height: 250px;
+}
+.Portfolio-title{
+    text-transform:lowercase;
+    transition: color 0.5s;
+}
+.Portfolio-desc{
+    color: #999999;
+    line-height: 1.09;
+  transition: color 0.5s;
+
+
+}
+.card:hover .Portfolio-title  {
+    color: white;
+}
+.card:hover  .Portfolio-desc  {
+    color: #e9d207;
+
+}
+/* 3.5 service section */
+.service-content{
+    background-color: #f9f9f9;
+    
+}
+.service-section{
+    width: 50%;
+    height: 400px;
+   display: inline-block;
+ 
+}
+.service-section .section-header{
+    text-align: left;
+    width: 100%;
+
+}
+.service-section .section-header > .line{
+    margin: 11px 0px 11px 0px;
+}
+ .service-item-dec{
+    padding-right: 20px;
+    color: #999;
+    line-height: 1.4;
+    font-size: 17px;
+    margin-bottom: 20px;
+ }
+ .service-list{
+    list-style: none;
+ }
+ .service-list li{
+    margin-bottom: 10px;
+    color: #999;
+ }
+ .service-list li i{
+    border: 1px solid #6195ff;
+    color: #6195ff;
+    padding: 7px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+ }
+
+.service-section.mg{
+    position: relative;
+    width: 50%;
+    height: 400px;
+    display: inline-block;
+}
+ .ser-img img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: auto;
+ }
+.service-bollets{
+list-style: none;
+position: absolute;
+    bottom: -416px;
+    left: 364px;
+    
+}
+.service-bollets li{
+    width:10px ;
+    height: 10px;
+    display:inline-block;
+    border-radius: 50%;
+   background-color: #e8e8e8;
+    margin-right: 11px;
+    transition:background-color .2s ;
+}
+.service-bollets .active{background-color: #6195ff;}
+.service-bollets li:hover{
+    background-color: #6195ff;
+
+}
+
+/* 3.6 team section */
+
+.team-content-item {
+   background-color: #e8e8e8;
+text-align: center;   
+}
+.team-content-item .team-img{
+position: relative;
+margin: auto;
+width: auto;
+height: 311px;
+}
+.team-content-item .team-img img{
+display: block;
+height: 100%;
+width: 100%;
+margin: auto;
+padding: 10px;
+align-items: center;
+}
+
+
+ .team-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: hsla(0, 1%, 15%, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 3;
+
+}
+.team-overlay a{
+    width: 40px;
+    height: 40px;
+    background-color: #6195ff;
+    color: white;
+    display: block;  
+    margin-left: auto;
+}
+.team-overlay a i{
+    line-height: 40px;
+   
+}
+.team-info .team-info-titel{
+    text-transform: capitalize;
+    color: #222;
+    margin: 10px auto;
+     transition: color 0.5s , opacity 0.5s , visibility 0.5s;
+
+}
+.team-info .team-info-text{
+    color: #999;
+    text-transform: capitalize;
+    font-size: 18px;
+    transition: color 0.5s , opacity 0.5s , visibility 0.5s;
+     
+}
+
+.team-content-item:hover .team-overlay{
+    visibility: visible;
+    opacity: 1;
+}
+.team-content-item:hover .team-info-text {
+    color:#6195ff;
+
+}
+.team-content-item:hover .team-info-titel{
+        color:#6195ff;
+}
+/* perant (2) */
+
+.team-content-item.mg{
+    margin: 0 4%;
+}
+    
+/* footer */
+.footer {
+    background: #f8f9fa;
+    padding: 40px 0 20px;
+    border-top: 2px solid #eee;
+}
+
+.footer-brand {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.footer-text {
+    color: #6c757d;
+    font-size: 0.9rem;
+    max-width: 300px;
+}
+
+.social-links {
+    margin: 20px 0;
+}
+
+.social-link {
+    color: #6c757d;
+    margin-right: 20px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: #0d6efd;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-links a {
+    color: #6c757d;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #0d6efd;
+}
+
+.copyright {
+    color: #6c757d;
+    font-size: 0.85rem;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
