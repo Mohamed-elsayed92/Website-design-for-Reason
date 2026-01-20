@@ -58,20 +58,25 @@
 
 /*  2- General css styles*/
 html {
-  scroll-behavior: smooth;
+ scroll-behavior:smooth !important;
 
 }
-
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.body {
+
+
+
+body {
     font-family:sans-serif;
 }
+
+
+
+
 
 .container {
     width: 80%;
@@ -176,63 +181,69 @@ position: relative;
 
 
 }
+ .body{scroll-behavior: smooth;}
 
 
-.header-container .navpar{
-    width: 100%;
-    direction: rtl;
-list-style: none;
-display: inline-block;
-position: absolute;
-padding: 20px 79px;}
-.header-container .navpar li{
-    display: inline-block;
-}
-.header-container .navpar li a{
-    color:rgb(24, 3, 184);
-    text-decoration: none;
-    display: block;
-    padding: 5px 24px;
-    font-size:24px;}
+
 
    .navbar-nav .nav-link {
     display: inline-block;
     width: auto ;
     height:auto ;
+    justify-content: center;
 }
- 
+ .dropdown {
+    position: relative;
+    display: inline-block; /* لضمان عدم شغل الحاوية لعرض 100% وإزاحة العناصر التي تليها عمودياً */
+}
+.dropdown-content {
+    display:inline-block; /* إخفاء القائمة افتراضياً */
+    position: absolute;
+    background-color: #f7f6f6; /* لون الخلفية */
+   
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 999; /* التأكد من ظهور القائمة فوق العناصر الأخرى */
+    top: 50px; /* وضع القائمة أسفل الزر مباشرة (بنسبة 100% من ارتفاع الزر) */
+  right: 0; /* محاذاة القائمة إلى يسار الزر (أو اليمين حسب التصميم المطلوب) */
+}
+.dropdown:hover .dropdown-content {
+    display: block; /* إظهار القائمة */
+  
+}
+.dropdown-content{
+ border:   2px double #6195ff;
+ box-shadow:  0 0 8px #6195ff;
 
+}
+.dropdown-content .navbar-nav .nav-item{
+    border-bottom:   1px solid #4d4b4b;
+}
+.collapse{
+    text-align: left;}
 
-.header-address {
+.nav-item .header-address {
     color: #2500cc !important; /* اللون  الداكن */
 }
 
 /* لتغيير لون الروابط عند مرور مؤشر الفأرة عليها (Hover) */
-.header-address:hover {
+.nav-item .header-address:hover {
     color: #646399 !important; /* لون فاتح عند المرور */
 
 }
-.header-address::after {
+.nav-item .header-address::after {
     content: "";
     width: 100%; /* اجعل العرض 100% دائمًا */
     height: 3px; /* اجعل الارتفاع 3px دائمًا */
     background-color: #6195ff;
     display: block;
     margin-top: 5px;
-    transform: scaleX(0); /* **الحل: اجعله 0% على محور X** */
+ transform: scaleX(0); 
     transform-origin: left; /* ابدأ التشغيل من اليسار */
     transition:  transform 0.5s ease;
 }
-
-.header-address:hover::after {
-    transform: scaleX(1); /* **عند التمرير، اجعله 100% على محور X (سيظهر)** */
-
+.nav-item .header-address:hover::after{
+    transform: scaleX(1); 
 }
-
-.navbar-toggler {
-position: absolute;
-
-   right: 10%;}
 
  .header .images-logo img{
     width: 73px;

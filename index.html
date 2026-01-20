@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html dir="ltr">
+<html lang="ar" dir="ltr">
 
 <head>
   <meta charset="utf-8">
   <meta name="keywords" content="" />
   <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BN Resin Art</title>
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/style.css">
@@ -12,66 +13,70 @@
 <body dir="ltr">
 
   <!--  -->
-  <nav class="navbar navbar-expand-sm bg-body-tertiary navbar-light">
-  <div class="container-fluid">
-
-    <!-- Logo -->
-    <a class="navbar-brand" href="#">
+  <nav class="navbar navbar-default navbar-fixed-top navbar-expand-lg bg-body-tertiary navbar-light">
+  <div class="container-fluid flex-column justify-content-between ">
+    <!-- القائمة العادية للشاشات الكبيرة -->
+          <div class=" collapse navbar-collapse flex-grow-1 container-fluid ">
+            <!-- Logo -->
+    <a class="navbar-brand " href="#">
       <img src="images/ChatGPT Image Aug 11, 2025, 06_04_45 AM.png" style="width: 4rem">
     </a>
-
-    <!-- زر القائمة للموبايل -->
-    <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
-      <span class="navbar-toggler-icon  "></span>
-    </button>
-
-    <!-- قائمة Offcanvas للموبايل -->
-    <div class="offcanvas offcanvas-start" id="mobileMenu">
-   <div class="offcanvas-header">
-    <h5 class="offcanvas-title">Menu</h5>
-                      <button class="btn-close" data-bs-dismiss="offcanvas"></button>
-        </div>  
     
-            <div class="offcanvas-body" id="mobileMenu">
-          <ul class="navbar-nav **justify-content-center w-100** mb-3">
-          <li class="nav-item mx-2"><a class="nav-link header-address js-no-scroll" href="#1">Home</a></li>
-          <li class="nav-item mx-2"><a class="nav-link header-address js-no-scroll" href="#2">About</a></li>
-          <li class="nav-item mx-2"><a class="nav-link header-address js-no-scroll text-nowrap" href="#3">Photo Library</a></li>
-          <li class="nav-item mx-2"><a class="nav-link header-address js-no-scroll" href="#">Price</a></li>
-              <li class="nav-item mx-2"><a class="nav-link header-address js-no-scroll" href="#4">Contact</a></li>
-            </ul>
-
-            <!-- Search داخل offcanvas -->
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search">
-          <button class="btn btn-outline-success" type="button">Search</button>
-          </form> </div> </div>
-          <!-- القائمة العادية للشاشات الكبيرة -->
-          <div class="collapse navbar-collapse  flex-sm-column flex-md-row d-none d-sm-flex  "  id="mobileMenu">
-         <ul class="navbar-nav ms-2 align-self-sm-stretch ">
-            <li class="nav-item mx-2"><a class="nav-link header-address" href="#1">Home</a></li>
+         <ul class="navbar-nav mt-1 me-auto ">
+            <li class="nav-item mx-2"><a class="nav-link header-address active" href="#1">Home</a></li>
           <li class="nav-item mx-2"><a class="nav-link header-address" href="#2">About</a></li>
           <li class="nav-item mx-2"><a class="nav-link header-address text-nowrap" href="#3">Photo Library</a></li>
           <li class="nav-item mx-2"><a class="nav-link header-address" href="#">Price</a></li>
           <li class="nav-item mx-2"><a class="nav-link header-address" href="#4">Contact</a></li>
           </ul>
-          <form class="d-flex container-fluid " role="search">
-          <input class="form-control me-2" type="search" placeholder="Search">
+          <form class="d-flex flex-grow-1 " role="search">
+          <input class="form-control me-2 flex-grow-1" type="search" placeholder="Search">
           <button class="btn btn-outline-success" type="button">Search</button>
          </form>
     
         </div>
+<div class="d-flex align-items-center  w-100 d-lg-none  "> 
+    <!-- Logo -->
+    <a class="navbar-brand " href="#">
+      <img src="images/ChatGPT Image Aug 11, 2025, 06_04_45 AM.png" style="width: 4rem">
+    </a>
+       
 
-           
-     
-        
-        </div>
-        </div>
- 
+    <form class="d-flex align-items-start d-lg-none flex-grow-1 form-2 " role="search">
+              <input class="form-control me-3 " type="search" placeholder="Search"aria-label="Search">
+          <button class="btn btn-outline-success align-content-between" type="submit">Search</button>
+          </form>
+          <div class="dropdown">
+<button class="navbar-toggler mt-1 ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+       <div class="dropdown-content">
+         <h5 class="collapse-h5 mx-5" >Menu</h5>
+      <ul class="navbar-nav menu-list mx-2 ">
+        <li class="nav-item">
+          <a class="nav-link  header-address active" href="#1">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link  header-address" href="#2">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link header-address  text-nowrap" href="#3">Photo Library</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link  header-address" href="#">Price</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link  header-address" href="#4">Contact</a>
+        </li>
+
+      </ul>
+      </div>
+      </div>
+    </div>
+  </div>
 </nav>
-    <!--  -->
-  
-  <!--1-home section  -->
+    <!--1-home section  -->
   <div class="home p-4" id="1">
     <div class=" container ">
     <div class="row justify-content-center flex-sm-column flex-md-row ">
@@ -411,9 +416,8 @@
         </div>
     </div>
 </footer>
-<script src="js/jav.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
-
+<script src="JS/jav.js"></script>
 
 </body>
 </head>
