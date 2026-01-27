@@ -158,81 +158,20 @@ ul {
 
 /* 3-sections styles */
 /* 3.0 header */
-.header {
-
-    position:fixed;
-    z-index:10;
-    background:linear-gradient(to left bottom, #b4f1b4, transparent);
-    height: 73px;
-width: 100%;
-border: 4px solid linear-gradient(to left bottom, #b4f1b4, transparent);
-}
-
-.header-containr{
-       height: 73px;
-width: 100%;
-position: relative;
-    
-}
-
-.header img{
-    float: left;
-  margin: 0px 5px;
-
+#mohamed.collapse .nav-item{
+border-bottom: 1px solid #e7e7e7; 
 
 }
- .body{scroll-behavior: smooth;}
-
-
-
-
-   .navbar-nav .nav-link {
-    display: inline-block;
-    width: auto ;
-    height:auto ;
-    justify-content: center;
-}
- .dropdown {
-    position: relative;
-    display: inline-block; /* لضمان عدم شغل الحاوية لعرض 100% وإزاحة العناصر التي تليها عمودياً */
-}
-.dropdown-content {
-    display:inline-block; /* إخفاء القائمة افتراضياً */
-    position: absolute;
-    background-color: #f7f6f6; /* لون الخلفية */
-   
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 999; /* التأكد من ظهور القائمة فوق العناصر الأخرى */
-    top: 50px; /* وضع القائمة أسفل الزر مباشرة (بنسبة 100% من ارتفاع الزر) */
-  right: 0; /* محاذاة القائمة إلى يسار الزر (أو اليمين حسب التصميم المطلوب) */
-}
-.dropdown:hover .dropdown-content {
-    display: block; /* إظهار القائمة */
-  
-}
-.dropdown-content{
- border:   2px double #6195ff;
- box-shadow:  0 0 8px #6195ff;
-
-}
-.dropdown-content .navbar-nav .nav-item{
-    border-bottom:   1px solid #4d4b4b;
-}
-.collapse{
-    text-align: left;}
 
 .nav-item .header-address {
     color: #2500cc !important; /* اللون  الداكن */
+    display: inline-block;
 }
 
-/* لتغيير لون الروابط عند مرور مؤشر الفأرة عليها (Hover) */
-.nav-item .header-address:hover {
-    color: #646399 !important; /* لون فاتح عند المرور */
 
-}
 .nav-item .header-address::after {
     content: "";
-    width: 100%; /* اجعل العرض 100% دائمًا */
+    width:100%; /* اجعل العرض 100% دائمًا */
     height: 3px; /* اجعل الارتفاع 3px دائمًا */
     background-color: #6195ff;
     display: block;
@@ -244,11 +183,19 @@ position: relative;
 .nav-item .header-address:hover::after{
     transform: scaleX(1); 
 }
+#mohamed.collapse.show, 
+#mohamed.collapsing {
+    position: absolute;
+    top: 100%; /* تبدأ مباشرة بعد الهيدر */
+    right: 0;
+    z-index: 1050; /* للتأكد من ظهورها فوق أي عنصر آخر */
+    background-color: #fff; /* أضف لون خلفية لكي لا تظهر شفافة فوق الكلام */
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1); /* اختياري: لمسة جمالية */
+}
+.navbar{
+    position: relative;
+}
 
- .header .images-logo img{
-    width: 73px;
-    left: 60px;
- }
 /* 3.1 home section */
 .home {
     width: 100%;
